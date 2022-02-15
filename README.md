@@ -21,13 +21,20 @@ services:
     fonts:
         image: docker.pkg.github.com/citipo/docker-google-fonts-proxy/alpine
         ports:
-            - '80:80' # You can use a proxy like https://github.com/nginx-proxy/nginx-proxy to provide SSL
+            # You can use a proxy (like https://github.com/nginx-proxy/nginx-proxy) 
+            # to provide SSL
+            - '80:80'
         environment:
-            - FONTS_HOST=fonts.citipo.com # The host you use for fonts, to replace in Google Fonts files
+            # The host you use for fonts: references to Google Fonts 
+            # will be replaced to this host in CSS files
+            - FONTS_HOST=fonts.citipo.com
 ```
 
-With docker CLI:
+With Docker CLI:
 
 ```bash
-docker run -d -p 80:80 -e FONTS_HOST=fonts.citipo.com docker.pkg.github.com/citipo/docker-google-fonts-proxy/alpine
+docker run -d \ 
+    -p 80:80 \
+    -e FONTS_HOST=fonts.citipo.com \
+    docker.pkg.github.com/citipo/docker-google-fonts-proxy/alpine
 ```
