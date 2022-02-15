@@ -23,11 +23,11 @@ services:
         ports:
             - '80:80' # You can use a proxy like https://github.com/nginx-proxy/nginx-proxy to provide SSL
         environment:
-            - FONTS_HOST=https://fonts.citipo.com # The host you use for fonts, to replace in Google Fonts files
+            - FONTS_HOST=fonts.citipo.com # The host you use for fonts, to replace in Google Fonts files
 ```
 
 With docker CLI:
 
 ```bash
-docker run -d -p 80:80 -e FONTS_HOST=https://fonts.citipo.com docker.pkg.github.com/citipo/docker-google-fonts-proxy/alpine
+docker run -d -p 80:80 -e FONTS_HOST=fonts.citipo.com docker.pkg.github.com/citipo/docker-google-fonts-proxy/alpine
 ```
