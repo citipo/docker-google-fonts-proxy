@@ -39,7 +39,7 @@ version: '3'
 
 services:
     fonts:
-        image: docker.pkg.github.com/citipo/docker-google-fonts-proxy/alpine
+        image: ghcr.io/citipo/docker-google-fonts-proxy/alpine
         ports:
             # You can use a proxy (like https://github.com/nginx-proxy/nginx-proxy) 
             # to provide SSL
@@ -56,7 +56,7 @@ With Docker CLI:
 docker run -d \ 
     -p 80:80 \
     -e FONTS_HOST=fonts.citipo.com \
-    docker.pkg.github.com/citipo/docker-google-fonts-proxy/alpine
+    ghcr.io/citipo/docker-google-fonts-proxy/alpine
 ```
 
 ## For developers: what to tell you Data Protection Officer?
