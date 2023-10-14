@@ -47,6 +47,7 @@ http {
             proxy_pass https://fonts.googleapis.com/;
             proxy_set_header Host fonts.googleapis.com;
             proxy_set_header Accept-Encoding "";
+            proxy_set_header Cache-Control "public, max-age=180, s-maxage=180";
 
             subs_filter_types text/css;
             subs_filter //fonts.gstatic.com/ //${FONTS_HOST}/fonts/;
