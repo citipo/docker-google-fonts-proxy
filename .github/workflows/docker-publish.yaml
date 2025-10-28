@@ -12,10 +12,10 @@ jobs:
             - uses: actions/checkout@master
 
             - name: Build and publish
-              uses: elgohr/Publish-Docker-Github-Action@master
+              uses: elgohr/Publish-Docker-Github-Action@v5
               with:
-                  name: citipo/docker-google-fonts-proxy/alpine
+                  name: citipo/docker-google-fonts-proxy
                   username: citipo
                   password: ${{ secrets.GITHUB_TOKEN }}
-                  registry: docker.pkg.github.com
+                  registry: ghcr.io
                   dockerfile: Dockerfile

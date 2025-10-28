@@ -1,0 +1,7 @@
+services:
+    fonts:
+        build: .
+        ports:
+            - '4000:80'
+        environment:
+            FONTS_HOST: localhost:4000
